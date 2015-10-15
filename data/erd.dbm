@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.8.1" last-position="140,0" last-zoom="1"
+	 default-schema="public" default-owner="postgres">
+<database name="new_database">
+</database>
+
+<schema name="public" protected="true" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<table name="data_center">
+	<schema name="public"/>
+	<position x="154" y="26"/>
+	<column name="name" not-null="true">
+		<type name="text"/>
+	</column>
+	<column name="agency">
+		<type name="text"/>
+	</column>
+	<column name="component_name_abbrev">
+		<type name="text"/>
+	</column>
+	<column name="published_name">
+		<type name="text"/>
+	</column>
+	<column name="core">
+		<type name="boolean"/>
+	</column>
+	<column name="city">
+		<type name="text"/>
+	</column>
+	<column name="state">
+		<type name="char" length="2"/>
+	</column>
+	<column name="zip5">
+		<type name="char" length="5"/>
+	</column>
+	<column name="country">
+		<type name="text"/>
+	</column>
+	<column name="gross_floor_area">
+		<type name="integer"/>
+	</column>
+	<column name="an_cost_per_sqft">
+		<type name="integer"/>
+	</column>
+	<column name="tco_includes_elec">
+		<type name="boolean"/>
+	</column>
+	<column name="tco_ownership_type">
+		<type name="char" length="2"/>
+	</column>
+	<column name="tco_providing_services">
+		<type name="boolean"/>
+	</column>
+	<column name="tco_tier">
+		<type name="char" length="2"/>
+	</column>
+	<column name="fte">
+		<type name="numeric"/>
+	</column>
+	<column name="fte_cost">
+		<type name="numeric"/>
+	</column>
+	<column name="tco_elec_is_metered">
+		<type name="boolean"/>
+	</column>
+	<column name="total_power_capacity">
+		<type name="numeric"/>
+	</column>
+	<column name="avg_elec_usage">
+		<type name="numeric"/>
+	</column>
+	<column name="total_it_power_cap">
+		<type name="numeric"/>
+	</column>
+	<column name="avg_it_elec_usage">
+		<type name="numeric"/>
+	</column>
+	<column name="cost_per_kwh">
+		<type name="numeric"/>
+	</column>
+	<column name="pue">
+		<type name="numeric"/>
+	</column>
+	<column name="rack_count">
+		<type name="numeric"/>
+	</column>
+	<column name="ibm_mainframe_count">
+		<type name="integer"/>
+	</column>
+	<column name="other_mainframe_count">
+		<type name="integer"/>
+	</column>
+	<column name="windows_server_count">
+		<type name="integer"/>
+	</column>
+	<column name="unix_server_count">
+		<type name="integer"/>
+	</column>
+	<column name="linux_server_count">
+		<type name="integer"/>
+	</column>
+	<column name="hpc_cluster_node_count">
+		<type name="integer"/>
+	</column>
+	<column name="other_server_count">
+		<type name="integer"/>
+	</column>
+	<column name="virtual_hosts_count">
+		<type name="integer"/>
+	</column>
+	<column name="os_count">
+		<type name="integer"/>
+	</column>
+	<column name="storage_capacity">
+		<type name="numeric"/>
+		<comment><![CDATA[in TB]]></comment>
+	</column>
+	<column name="storage_used">
+		<type name="numeric"/>
+		<comment><![CDATA[in TB]]></comment>
+	</column>
+	<column name="data_center_id">
+		<type name="text"/>
+	</column>
+	<column name="data_center_legacy_id">
+		<type name="text"/>
+	</column>
+	<column name="floor_area_class">
+		<type name="text"/>
+	</column>
+</table>
+
+<table name="floor_area_classification">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="612" y="51"/>
+	<column name="name" not-null="true">
+		<type name="text"/>
+	</column>
+	<column name="min_closed">
+		<type name="integer"/>
+		<comment><![CDATA[greater or equal to this amount]]></comment>
+	</column>
+	<column name="max_open">
+		<type name="smallint"/>
+		<comment><![CDATA[less than this amount]]></comment>
+	</column>
+	<constraint name="pk" type="pk-constr" table="public.floor_area_classification">
+		<columns names="name" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="ownership_type">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="658" y="188"/>
+	<column name="id" not-null="true">
+		<type name="char" length="2"/>
+	</column>
+	<column name="name">
+		<type name="text"/>
+	</column>
+	<constraint name="pk" type="pk-constr" table="public.ownership_type">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="tier">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="679" y="366"/>
+	<column name="id" not-null="true">
+		<type name="char" length="2"/>
+	</column>
+	<column name="name">
+		<type name="text"/>
+	</column>
+	<constraint name="pk" type="pk-constr" table="public.tier">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<constraint name="fk_own_type" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.ownership_type" table="public.data_center">
+	<columns names="tco_ownership_type" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<constraint name="fk_tier" type="fk-constr" comparison-type="MATCH FULL"
+	 upd-action="NO ACTION" del-action="NO ACTION" ref-table="public.tier" table="public.data_center">
+	<columns names="tco_tier" ref-type="src-columns"/>
+	<columns names="id" ref-type="dst-columns"/>
+</constraint>
+
+<relationship name="rel_data_center_ownership_type" type="relfk"
+	 src-table="public.data_center"
+	 dst-table="public.ownership_type"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="rel_data_center_tier" type="relfk"
+	 src-table="public.data_center"
+	 dst-table="public.tier"
+	 src-required="false" dst-required="false"/>
+
+</dbmodel>
