@@ -10,7 +10,8 @@
 
 1. npm install -g sails
 2. npm install
-3. sails lift
+3. bower install
+4. sails lift
 
 
 #Docker
