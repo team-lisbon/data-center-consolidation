@@ -1,0 +1,145 @@
+<form action="/datacenter/create" method="POST" role="form" class="new">
+	<div class="form-group">
+	<h2>Create a datacenter</h2>
+
+<% if(flash && flash.err) { %>
+<ul class="alert alert-success">
+<% Object.keys(flash.err).forEach(function(error) { %>
+<li><%- JSON.stringify(flash.err[error]) %></li>
+<% }) %>
+</ul>
+<% } %>
+	
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="dCid" name="dCid">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="aDcid" name="aDcid">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="component" name="component">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="dataCenterName" name="dataCenterName">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="grossFloorArea" name="grossFloorArea">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="totalCustomerFloorArea" name="totalCustomerFloorArea">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="annualCostSq" name="annualCostSq">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="fte" name="fte">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="fteCost" name="fteCost">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="totalPowerCapacity" name="totalPowerCapacity">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="totalPowerCapacityIt" name="totalPowerCapacityIt">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="avgElectricityUsage" name="avgElectricityUsage">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="avgItElectricityUsage" name="avgItElectricityUsage">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="costPerKwh" name="costPerKwh">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="rackCount" name="rackCount">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="ibmMainframes" name="ibmMainframes">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="otherMainframes" name="otherMainframes">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="totalWindowsServers" name="totalWindowsServers">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="totalUnixServers" name="totalUnixServers">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="totalLinuxServers" name="totalLinuxServers">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="totalHPCNodes" name="totalHPCNodes">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="otherServers" name="otherServers">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="totalVirtualHosts" name="totalVirtualHosts">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="totalVirtualOS" name="totalVirtualOS">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="totalStorage" name="totalStorage">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="usedStorage" name="usedStorage">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="totalFloorEliminated" name="totalFloorEliminated">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="totalDecomissionedPhysicalServers" name="totalDecomissionedPhysicalServers">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="totalServersMoved" name="totalServersMoved">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="overallFTEreduction" name="overallFTEreduction">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="year" name="year">
+	</div>
+
+	<div class="control-group" style="width: 300px;">
+	<input type="text" class="form-control" placeholder="quarter" name="quarter">
+	</div>
+
+
+	</div>
+	<input type="submit" value="Submit" class="btn btn-default"/> | 
+	<a href="/datacenter">Back to list</a>
+</form>

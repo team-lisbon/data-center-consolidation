@@ -1,22 +1,12 @@
-<div class="default-page">
-	<div class="container">
-    <div class="header">
-        <h1 id="main-title">DC Hub</h1>
-        <p1 id="description">
-        	Data Center Hub provides a central view of all GSA Data Centeres and variances over time.
-        </p1>
-    </div>
-    </div>
+<div class="container">
+  <div class="jumbotron">
+    <h1>My Scaffolds</h1>
 
-    <div class="container">
-	    <table class="table">
-			<tbody>
-				<tr>
-					<th><button class="btn btn-primary enter">Enter</button></th>
-					<th><button class="btn btn-primary analyze">Analyze</button></th>
-					<th><button class="btn btn-primary generate">Generate</button></th>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+    <h2>...your scaffolds are just a click away.</h2>
+    <% _.each(_.keys(sails.controllers), function(controller) { %>
+
+    <a href="/<%= controller %>" class="btn btn-lg btn-success spar-list"><%= controller %></a>
+
+    <% }) %>
+  </div>
 </div>
