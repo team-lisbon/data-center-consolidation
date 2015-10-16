@@ -3,12 +3,12 @@ function goToURL(url) {
     }
 
 $("#add").click(function() {
-	goToURL('/add');
+	goToURL('/datacenter/index');
 
 });
 
 $("#analyze").click(function() {
-	goToURL('/analyze');
+	goToURL('/datacenter');
 
 });
 
