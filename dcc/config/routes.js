@@ -36,6 +36,10 @@ module.exports.routes = {
     view: 'homepage'
   },
 
+  '/add': {
+    view: 'add'
+  }
+
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
@@ -45,6 +49,6 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-  'GET /user/:id': "user.getOne"
+  //'GET /user/:id': "user.getOne"
 
 };
