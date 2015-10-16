@@ -1,16 +1,7 @@
 # data-center-consolidation
 
-# Tools Used
-* pgModeler - http://pgmodeler.com.br/
-* Sails
-* Backbone
-* Bourbon
+data folder has the data
 
-# Getting Started
+dcc has the code
 
-1. npm install -g sails
-2. npm install
-3. sails lift
-
-
-#Docker
+doc folder has additional documentation and the presentation
