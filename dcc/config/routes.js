@@ -38,6 +38,14 @@ module.exports.routes = {
 
   '/add': {
     view: 'add'
+  },
+
+   '/analyze': {
+    view: 'analyze'
+  },
+
+   '/generate': {
+    view: 'generate'
   }
 
   /***************************************************************************
