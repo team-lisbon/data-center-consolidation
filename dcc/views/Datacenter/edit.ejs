@@ -1,0 +1,177 @@
+	<form action="/datacenter/update/<%=datacenter.id%>" method="POST" class="edit">
+	<div class="form-group">
+		<h2> editing a datacenter... </h2>
+		<% if(flash && flash.err) { %>
+<ul class="alert alert-success">
+<% Object.keys(flash.err).forEach(function(error) { %>
+<li><%- JSON.stringify(flash.err[error]) %></li>
+<% }) %>
+</ul>
+<% } %>
+		
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.dCid %>" name="dCid" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.aDcid %>" name="aDcid" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.component %>" name="component" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.dataCenterName %>" name="dataCenterName" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.grossFloorArea %>" name="grossFloorArea" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.totalCustomerFloorArea %>" name="totalCustomerFloorArea" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.annualCostSq %>" name="annualCostSq" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.fte %>" name="fte" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.fteCost %>" name="fteCost" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.totalPowerCapacity %>" name="totalPowerCapacity" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.totalPowerCapacityIt %>" name="totalPowerCapacityIt" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.avgElectricityUsage %>" name="avgElectricityUsage" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.avgItElectricityUsage %>" name="avgItElectricityUsage" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.costPerKwh %>" name="costPerKwh" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.rackCount %>" name="rackCount" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.ibmMainframes %>" name="ibmMainframes" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.otherMainframes %>" name="otherMainframes" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.totalWindowsServers %>" name="totalWindowsServers" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.totalUnixServers %>" name="totalUnixServers" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.totalLinuxServers %>" name="totalLinuxServers" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.totalHPCNodes %>" name="totalHPCNodes" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.otherServers %>" name="otherServers" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.totalVirtualHosts %>" name="totalVirtualHosts" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.totalVirtualOS %>" name="totalVirtualOS" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.totalStorage %>" name="totalStorage" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.usedStorage %>" name="usedStorage" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.totalFloorEliminated %>" name="totalFloorEliminated" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.totalDecomissionedPhysicalServers %>" name="totalDecomissionedPhysicalServers" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.totalServersMoved %>" name="totalServersMoved" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.overallFTEreduction %>" name="overallFTEreduction" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.year %>" name="year" type="text" class="form-control"/>
+	</div>
+
+	<div class="form-group" style="width: 400px;">
+	<label>name</label>
+	<input value="<%= datacenter.quarter %>" name="quarter" type="text" class="form-control"/>
+	</div>
+
+		</div>
+		<input type="submit" value="Update Datacenter" class="btn btn-default"/>
+		<a href="/datacenter/show/<%=datacenter.id %>" class="btn btn-danger">Cancel</a>
+	</form>
+	
+	

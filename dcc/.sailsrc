@@ -1,7 +1,8 @@
 {
   "generators": {
     "modules": {
-      "auth-api": "sails-auth/generator"
+      "auth-api": "sails-auth/generator",
+      "scaffold": "sails-generate-scaffold"
     }
   }
 }

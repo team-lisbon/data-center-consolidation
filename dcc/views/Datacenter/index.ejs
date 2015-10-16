@@ -1,0 +1,153 @@
+<div class="container">
+	<h3>Datacenter Listing</h3>
+	<table class='table table-hover table-condensed'>
+	<tr>
+
+	<th> Data Center ID </th>
+
+	<th> aDcid </th>
+
+	<th> component </th>
+
+	<th> dataCenterName </th>
+
+	<th> grossFloorArea </th>
+
+	<th> totalCustomerFloorArea </th>
+
+	<th> annualCostSq </th>
+
+	<th> fte </th>
+
+	<th> fteCost </th>
+
+	<th> totalPowerCapacity </th>
+
+	<th> totalPowerCapacityIt </th>
+
+	<th> avgElectricityUsage </th>
+
+	<th> avgItElectricityUsage </th>
+
+	<th> costPerKwh </th>
+
+	<th> rackCount </th>
+
+	<th> ibmMainframes </th>
+
+	<th> otherMainframes </th>
+
+	<th> totalWindowsServers </th>
+
+	<th> totalUnixServers </th>
+
+	<th> totalLinuxServers </th>
+
+	<th> totalHPCNodes </th>
+
+	<th> otherServers </th>
+
+	<th> totalVirtualHosts </th>
+
+	<th> totalVirtualOS </th>
+
+	<th> totalStorage </th>
+
+	<th> usedStorage </th>
+
+	<th> totalFloorEliminated </th>
+
+	<th> totalDecomissionedPhysicalServers </th>
+
+	<th> totalServersMoved </th>
+
+	<th> overallFTEreduction </th>
+
+	<th> year </th>
+
+	<th> quarter </th>
+
+	<th></th>
+	<th></th>
+	<th></th>
+</tr>
+	<% _.forEach(datacenters, function(datacenter) { %>
+    		<tr data-id="<%=datacenter.id %>" data-model="datacenter">
+
+			<td><%= datacenter.dCid%></td>
+
+			<td><%= datacenter.aDcid%></td>
+
+			<td><%= datacenter.component%></td>
+
+			<td><%= datacenter.dataCenterName%></td>
+
+			<td><%= datacenter.grossFloorArea%></td>
+
+			<td><%= datacenter.totalCustomerFloorArea%></td>
+
+			<td><%= datacenter.annualCostSq%></td>
+
+			<td><%= datacenter.fte%></td>
+
+			<td><%= datacenter.fteCost%></td>
+
+			<td><%= datacenter.totalPowerCapacity%></td>
+
+			<td><%= datacenter.totalPowerCapacityIt%></td>
+
+			<td><%= datacenter.avgElectricityUsage%></td>
+
+			<td><%= datacenter.avgItElectricityUsage%></td>
+
+			<td><%= datacenter.costPerKwh%></td>
+
+			<td><%= datacenter.rackCount%></td>
+
+			<td><%= datacenter.ibmMainframes%></td>
+
+			<td><%= datacenter.otherMainframes%></td>
+
+			<td><%= datacenter.totalWindowsServers%></td>
+
+			<td><%= datacenter.totalUnixServers%></td>
+
+			<td><%= datacenter.totalLinuxServers%></td>
+
+			<td><%= datacenter.totalHPCNodes%></td>
+
+			<td><%= datacenter.otherServers%></td>
+
+			<td><%= datacenter.totalVirtualHosts%></td>
+
+			<td><%= datacenter.totalVirtualOS%></td>
+
+			<td><%= datacenter.totalStorage%></td>
+
+			<td><%= datacenter.usedStorage%></td>
+
+			<td><%= datacenter.totalFloorEliminated%></td>
+
+			<td><%= datacenter.totalDecomissionedPhysicalServers%></td>
+
+			<td><%= datacenter.totalServersMoved%></td>
+
+			<td><%= datacenter.overallFTEreduction%></td>
+
+			<td><%= datacenter.year%></td>
+
+			<td><%= datacenter.quarter%></td>
+
+			<td><a href="/datacenter/show/<%=datacenter.id %>"  class="btn btn-primary btn-sm" role="button">Show</a></td>
+			<td><a href="/datacenter/edit/<%=datacenter.id %>"  class="btn btn-primary btn-sm" role="button">Edit</a></td>
+
+			<td><form action="/datacenter/destroy/<%=datacenter.id %>" method="POST">
+				<input type="hidden" name="_method" value="delete"/>
+				<input type="submit" value="Delete"  class="btn btn-danger btn-sm" role="button"/>
+			</form></td>
+		</tr>
+<% }) %>
+	</table>
+	<a href="/datacenter/new/" class="btn btn-success btn-sm" role="button">New Datacenter</a> |
+	<a href="/">all scaffolds</a>
+</div>
