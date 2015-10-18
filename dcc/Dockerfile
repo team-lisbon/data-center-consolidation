@@ -1,6 +1,6 @@
 FROM node:4.2
 
-RUN npm install -g sails grunt bower
+RUN npm install -g sails grunt grunt-cli
 
 
 #RUN mkdir -p /usr/src/app
