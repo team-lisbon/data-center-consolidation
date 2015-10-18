@@ -2,7 +2,8 @@ module.exports = function(grunt) {
 
   grunt.config.set('sass', {
     options: {
-      sourceMap: true
+      sourceMap: true,
+      includePaths: require('node-bourbon').includePaths
     },
     dev: {
       files: {
