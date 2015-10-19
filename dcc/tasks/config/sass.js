@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   grunt.config.set('sass', {
     options: {
       sourceMap: true,
-      includePaths: require('node-bourbon').includePaths
+      includePaths: require('node-neat').includePaths
     },
     dev: {
       files: {
